@@ -1,0 +1,41 @@
+.form-container {
+  margin-bottom: 1rem;
+
+  label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+  }
+
+  input,
+  textarea {
+    width: 93%;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    border: 1px solid #ccc;
+    transition: border-color 0.3s ease-in-out;
+
+    &:focus {
+      outline: none;
+      border-color: #ae97ec;
+    }
+  }
+
+  textarea {
+    height: 150px;
+  }
+}
+
+button[type='submit'] {
+  background-color: #ae97ec;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+
+  &:hover {
+    background-color: #8a6bbf;
+  }
+}

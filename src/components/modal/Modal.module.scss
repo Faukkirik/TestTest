@@ -1,0 +1,28 @@
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .modal-content {
+        background-color: #ae97ec;
+        padding: 1.25rem;
+        border-radius: 0.25rem;
+        text-align: center;
+        transition: opacity 0.3s ease-in-out;
+        .modal-text {
+            margin-bottom: 0.625rem;
+        }
+
+        .modal-close {
+            display: flex;
+            padding-top: 3.125rem;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+}

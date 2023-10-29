@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.module.css';
+import {ContactForm} from "./components/contact/ContactForm";
+import {useState} from "react";
+import {Modal} from "./components/modal/Modal";
+import style from "./App.module.css"
+import {Button} from "./components/button/Button";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const [isOpen, setIsOpen] = useState(false);
+    const handleOpenModal = () => {
+        setIsOpen(true);
+    }
+    const handleCloseModal = () => {
+        setIsOpen(false);
+    };
+    return (
+        <div className={style.App}>
+            <Button
+                nameButton={"Modal Button"}
+                onClick={handleOpenModal}
+                variant={'primary'}
+            />
+            {isOpen && <Modal isOpen={isOpen} onClose={handleCloseModal} text={<ContactForm/>}/>}
+        </div>
+    );
 }
 
 export default App;
