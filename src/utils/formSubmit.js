@@ -1,6 +1,6 @@
 export const submitForm = (formData, onSuccess, onError) => {
     const xhr = new XMLHttpRequest();
-    const url = 'http://localhost:9090/api/registration'; // Замените на реальный URL сервера
+    const url = 'http://localhost:9090/api/registration';
 
     xhr.open('POST', url, true);
     xhr.setRequestHeader('Content-Type', 'application/json');
