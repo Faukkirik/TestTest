@@ -38,16 +38,8 @@ export const ContactForm = () => {
                 formData,
                 () => {
                     setErrors({});
-                    setSuccessMsg(msg);
-                    setFormData({
-                        name: '',
-                        email: '',
-                        phone: '',
-                        message: '',
-                    });
                 },
                 () => {
-                    setErrors(fields);
                     setSuccessMsg('');
                 }
 
